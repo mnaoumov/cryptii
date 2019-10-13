@@ -8,17 +8,17 @@ import SpellingAlphabetEncoder from '../../src/Encoder/SpellingAlphabet'
 describe('SpellingAlphabetEncoder', () => {
   EncoderTester.test(SpellingAlphabetEncoder, [
     {
-      settings: { alphabet: 'nato' },
+      settings: { alphabet: 'english' },
       content: 'the quick brown fox jumps over 13 lazy dogs.',
       expectedResult:
         'Tango Hotel Echo (space) Quebec Uniform India Charlie Kilo (space) ' +
         'Bravo Romeo Oscar Whiskey November (space) Foxtrot Oscar X-ray ' +
         '(space) Juliett Uniform Mike Papa Sierra (space) Oscar Victor Echo ' +
-        'Romeo (space) One Three (space) Lima Alfa Zulu Yankee (space) Delta ' +
+        'Romeo (space) Wun Tree (space) Lima Alfa Zulu Yankee (space) Delta ' +
         'Oscar Golf Sierra Period'
     },
     {
-      settings: { alphabet: 'nato' },
+      settings: { alphabet: 'english' },
       content: 'X-Ray Xray (space) Period Stop',
       expectedResult: 'xx ..',
       direction: 'decode'
@@ -163,5 +163,57 @@ describe('SpellingAlphabetEncoder', () => {
     assert.throws(() => encoder.setSettingValue('alphabet', 'BadAlphabet'), error =>
       error.message.includes('\'BadAlphabet\'') && error.message.includes('\'BadWord\'')
     )
+  })
+
+  it('should take overrides from specified variant', done => {
+    const alphabetSpecs = [
+      {
+        name: 'Alphabet',
+        variants: [
+          {
+            name: 'someVariant',
+            label: 'someVariant',
+            description: 'someVariant'
+          },
+          {
+            name: 'someOtherVariant',
+            label: 'someOtherVariant',
+            description: 'someOtherVariant'
+          }
+        ],
+        mappings: [
+          {
+            character: 'x',
+            word: 'Word1',
+            override: {
+              word: 'OverriddenWord1',
+              variant: 'someVariant'
+            }
+          },
+          {
+            character: 'y',
+            word: 'Word2',
+            override: {
+              word: 'OverriddenWord2',
+              variant: 'someOtherVariant'
+            }
+          },
+          {
+            character: 'z',
+            word: 'Word3',
+            override: {
+              word: 'OverriddenWord3',
+              variant: ['someOtherVariant', 'someVariant']
+            }
+          }
+        ]
+      }
+    ]
+
+    const encoder = new SpellingAlphabetEncoder(alphabetSpecs)
+    encoder.setSettingValue('variant', 'someVariant')
+    encoder.encode('xyz').then(result => {
+      assert.strictEqual(result.getString(), 'OverriddenWord1 Word2 OverriddenWord3')
+    }).then(done, done)
   })
 })

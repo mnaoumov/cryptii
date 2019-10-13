@@ -12,8 +12,155 @@ const meta = {
 const defaultAlphabetSpecs = [
   /* eslint-disable no-multi-spaces */
   {
-    name: 'nato',
-    label: 'NATO/ICAO phonetic alphabet',
+    name: 'english',
+    label: 'English',
+    variants: [
+      {
+        name: 'icao2008',
+        label: 'Latest - NATO/ICAO, 2008 - Present',
+        description: '2008 – present ICAO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code',
+      },
+      {
+        name: 'icao1959',
+        label: 'NATO/ICAO, 1959, Geneva',
+        description: '1959 (Geneva) administrative radio conference\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1956',
+        label: 'NATO/ICAO, 1956, Final',
+        description: '1956 ICAO final\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1951',
+        label: 'NATO/ICAO, 1951',
+        description: '1951 ICAO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1949',
+        label: 'NATO/ICAO, 1949',
+        description: '1949 ICAO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1947',
+        label: 'NATO/ICAO, 1947, IATA Proposal',
+        description: '1947 IATA proposal to ICAO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1947lac',
+        label: 'NATO/ICAO, 1947, Latin America/Caribbean',
+        description: '1947 ICAO Latin America/Caribbean\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1947arrl',
+        label: 'NATO/ICAO, 1947, ARRL',
+        description: '1947 ICAO (adopted exactly from ARRL)\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1947usuk1943',
+        label: 'NATO/ICAO, 1947, 1943 US-UK',
+        description: '1947 ICAO (same as 1943 US-UK)\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1947ac',
+        label: 'NATO/ICAO, 1947, Atlantic City',
+        description: '1947 (Atlantic City) International Radio Conference\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1946',
+        label: 'NATO/ICAO, 1946, Communications Division, Joint Army/Navy',
+        description: '1946 ICAO Second Session of the Communications Division (same as Joint Army/Navy)\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1938',
+        label: 'NATO/ICAO, 1938, Cairo',
+        description: '1938 (Cairo) International Radiocommunication Conference\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1932',
+        label: 'NATO/ICAO, 1932, CCIR/ICAN',
+        description: '1932 General Radiocommunication and Additional Regulations (CCIR/ICAN)\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1927',
+        label: 'NATO/ICAO, 1927, Washington, CCIR',
+        description: '1927 (Washington, D.C.) International Radiotelegraph Convention (CCIR)\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'icao1920',
+        label: 'NATO/ICAO, 1920, UECU',
+        description: '1920 UECU\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1956',
+        label: 'International aviation, 1956 - Present',
+        description: '1956 – present ICAO\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1951',
+        label: 'International aviation, 1951',
+        description: '1951 ICAO\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1949',
+        label: 'International aviation, 1949',
+        description: '1949 ICAO\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1947',
+        label: 'International aviation, 1947, IATA Proposal',
+        description: '1947 IATA proposal to ICAO\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1947lac',
+        label: 'International aviation, 1947, Latin America/Caribbean',
+        description: '1947 ICAO Latin America/Caribbean\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1947arrl',
+        label: 'International aviation, 1947, ARRL',
+        description: '1947 ICAO (adopted exactly from ARRL)\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1947usuk1943',
+        label: 'International aviation, 1947, 1943 US/UK',
+        description: '1947 ICAO (same as 1943 US-UK)\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1946',
+        label: 'International aviation, 1946, Communications Division, Joint Army/Navy',
+        description: '1946 ICAO Second Session of the Communications Division (same as Joint Army/Navy)\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'ia1932',
+        label: 'International aviation, 1932',
+        description: '1932 General Radiocommunication and Additional Regulations (CCIR/ICAN)\nInternational aviation\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'imms2000',
+        label: 'International maritime mobile service, 2000 - Present, IMO SMCP',
+        description: '2000 – present IMO SMCP\nInternational maritime mobile service\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'imms1967',
+        label: 'International maritime mobile service, 1967, WARC',
+        description: '1967 WARC\nInternational maritime mobile service\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'imms1965',
+        label: 'International maritime mobile service, 1965 - Present, WRC-03',
+        description: '1965 – present (WRC-03) IMO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'imms1932',
+        label: 'International maritime mobile service, 1932 - 1965, IMO',
+        description: '1932 - 1965 IMO\nNATO phonetic alphabet\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      },
+      {
+        name: 'deltaairlines',
+        label: 'Delta Air Lines Airports',
+        description: 'Airports that have a majority of Delta Air Lines flights\nInternational Radiotelephony Spelling Alphabet\nICAO phonetic alphabet\nITU phonetic alphabet and figure code'
+      }
+    ],
     mappings: [
       {
         character: ' ',
@@ -21,157 +168,1478 @@ const defaultAlphabetSpecs = [
       },
       {
         character: 'a',
-        word: 'Alfa'
+        word: 'Alfa',
+        override: [
+          {
+            word: 'Argentine',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Amsterdam',
+            variant: [
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Able',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Adam',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Ana',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Alpha',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          }
+        ]
       },
       {
         character: 'b',
-        word: 'Bravo'
+        word: 'Bravo',
+        override: [
+          {
+            word: 'Brussels',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Baltimore',
+            variant: [
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Baker',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Brazil',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Beta',
+            variant: [
+              'icao1947',
+              'icao1949',
+              'ia1947',
+              'ia1949'
+            ]
+          }
+        ]
       },
       {
         character: 'c',
-        word: 'Charlie'
+        word: 'Charlie',
+        override: [
+          {
+            word: 'Canada',
+            variant: [
+              'icao1920',
+              'icao1927'
+            ]
+      },
+      {
+            word: 'Casablanca',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Coco',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Coca',
+            variant: [
+              'icao1949',
+              'icao1951',
+              'ia1949',
+              'ia1951'
+            ]
+          }
+        ]
       },
       {
         character: 'd',
-        word: 'Delta'
+        word: [
+          'Delta',
+          'Dixie'
+        ],
+        override: [
+          {
+            word: 'Damascus',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Denmark',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Danemark',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Dog',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'David',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Dado',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Data',
+            variant: 'deltaairlines'
+          }
+        ]
       },
       {
         character: 'e',
-        word: 'Echo'
+        word: 'Echo',
+        override: [
+          {
+            word: 'Ecuador',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Eddystone',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Edison',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Easy',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Edward',
+            variant: [
+              'icao1947arrl',
+              'icao1947',
+              'ia1947arrl',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Elsa',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: 'f',
-        word: 'Foxtrot'
+        word: 'Foxtrot',
+        override: [
+          {
+            word: 'France',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Francisco',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Florida',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Fox',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Freddie',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Fiesta',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: 'g',
-        word: 'Golf'
+        word: 'Golf',
+        override: [
+          {
+            word: 'Greece',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Gibraltar',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Gallipoli',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'George',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Gato',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Gramma',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Gold',
+            variant: [
+              'icao1951',
+              'ia1951'
+            ]
+          }
+        ]
       },
       {
         character: 'h',
-        word: 'Hotel'
+        word: 'Hotel',
+        override: [
+          {
+            word: 'Hanover',
+            variant: [
+              'icao1920',
+              'icao1927'
+            ]
+      },
+      {
+            word: 'Havana',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'icao1947',
+              'ia1932',
+              'ia1947',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'How',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Harry',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Hombre',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: 'i',
-        word: 'India'
+        word: 'India',
+        override: [
+          {
+            word: 'Italy',
+            variant: [
+              'icao1920',
+              'icao1927',
+              'icao1947',
+              'ia1947'
+            ]
+      },
+      {
+            word: 'Italia',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Item',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Ida',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          }
+        ]
       },
       {
         character: 'j',
-        word: 'Juliett'
+        word: 'Juliett',
+        override: [
+          {
+            word: 'Japan',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Jerusalem',
+            variant: [
+              'icao1927',
+              'icao1947ac',
+              'ia1932'
+            ]
+          },
+          {
+            word: 'Jérusalem',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Jig',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'John',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Julio',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Jupiter',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Julietta',
+            variant: [
+              'icao1949',
+              'ia1949'
+            ]
+          },
+          {
+            word: 'Juliet',
+            variant: 'imms2000'
+          }
+        ]
       },
       {
         character: 'k',
-        word: 'Kilo'
+        word: 'Kilo',
+        override: [
+          {
+            word: 'Khartoum',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Kimberley',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Kilogramme',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'King',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          }
+        ]
       },
       {
         character: 'l',
-        word: 'Lima'
+        word: 'Lima',
+        override: [
+          {
+            word: 'Liverpool',
+            variant: [
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+      },
+      {
+            word: 'Love',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Lewis',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Luis',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Liter',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          }
+        ]
       },
       {
         character: 'm',
-        word: 'Mike'
+        word: 'Mike',
+        override: [
+          {
+            word: 'Madrid',
+            variant: 'icao1920'
+      },
+      {
+            word: 'Madagascar',
+            variant: [
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Mary',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Mama',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Maestro',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Metro',
+            variant: [
+              'icao1949',
+              'icao1951',
+              'ia1949',
+              'ia1951'
+            ]
+          }
+        ]
       },
       {
         character: 'n',
-        word: 'November'
+        word: [
+          'November',
+          'Nickel'
+        ],
+        override: [
+          {
+            word: 'Nancy',
+            variant: [
+              'icao1920',
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+      },
+      {
+            word: 'Neufchatel',
+            variant: 'icao1927'
+          },
+          {
+            word: 'New york',
+            variant: [
+              'icao1932',
+              'icao1947ac',
+              'ia1932'
+            ]
+          },
+          {
+            word: 'New-york',
+            variant: [
+              'icao1938',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Nan',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Norma',
+            variant: [
+              'icao1947lac',
+              'icao1947',
+              'ia1947lac',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Nectar',
+            variant: [
+              'icao1949',
+              'icao1951',
+              'ia1949',
+              'ia1951'
+            ]
+          }
+        ]
       },
       {
         character: 'o',
-        word: 'Oscar'
+        word: 'Oscar',
+        override: [
+          {
+            word: 'Ostend',
+            variant: 'icao1920'
+          },
+          {
+            word: 'Ontario',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Oslo',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Oboe',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Otto',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Opera',
+            variant: [
+              'icao1947lac',
+              'icao1947',
+              'ia1947lac',
+              'ia1947'
+            ]
+          }
+        ]
       },
       {
         character: 'p',
-        word: 'Papa'
+        word: 'Papa',
+        override: [
+          {
+            word: 'Paris',
+            variant: [
+              'icao1920',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Portugal',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Peter',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Peru',
+            variant: [
+              'icao1947lac',
+              'icao1947',
+              'ia1947lac',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Polka',
+            variant: [
+              'icao1949',
+              'ia1949'
+            ]
+          }
+        ]
       },
       {
         character: 'q',
-        word: 'Quebec'
+        word: 'Quebec',
+        override: [
+          {
+            word: 'Québec',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Queen',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          }
+        ]
       },
       {
         character: 'r',
-        word: 'Romeo'
+        word: 'Romeo',
+        override: [
+          {
+            word: 'Rome',
+            variant: 'icao1920'
+          },
+          {
+            word: 'Rivoli',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Roma',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Roger',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Robert',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Rosa',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: 's',
-        word: 'Sierra'
+        word: [
+          'Sierra'
+        ],
+        override: [
+          {
+            word: 'Sardinia',
+            variant: 'icao1920'
+          },
+          {
+            word: 'Santiago',
+            variant: [
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Sail',
+            variant: [
+              'icao1946',
+              'ia1946'
+            ]
+          },
+          {
+            word: 'Sugar',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Susan',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Sara',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Santa',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          }
+        ]
       },
       {
         character: 't',
-        word: 'Tango'
+        word: 'Tango',
+        override: [
+          {
+            word: 'Tokio',
+            variant: [
+              'icao1920',
+              'icao1927'
+            ]
+          },
+          {
+            word: 'Tripoli',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Tare',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Thomas',
+            variant: [
+              'icao1947arrl',
+              'icao1947',
+              'ia1947arrl',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Tomas',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: 'u',
-        word: 'Uniform'
+        word: 'Uniform',
+        override: [
+          {
+            word: 'Uruguay',
+            variant: [
+              'icao1920',
+              'icao1927',
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Upsala',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Uncle',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Union',
+            variant: [
+              'icao1947arrl',
+              'icao1949',
+              'icao1951',
+              'ia1947arrl',
+              'ia1949',
+              'ia1951'
+            ]
+          },
+          {
+            word: 'Ursula',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          }
+        ]
       },
       {
         character: 'v',
-        word: 'Victor'
+        word: 'Victor',
+        override: [
+          {
+            word: 'Victoria',
+            variant: [
+              'icao1920',
+              'icao1927'
+            ]
+          },
+          {
+            word: 'Valencia',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          }
+        ]
       },
       {
         character: 'w',
-        word: 'Whiskey'
+        word: 'Whiskey',
+        override: [
+          {
+            word: 'Washington',
+            variant: [
+              'icao1920',
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'William',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Whisky',
+            variant: [
+              'ia1956',
+              'imms1965',
+              'imms1967',
+              'imms2000'
+            ]
+          }
+        ]
       },
       {
         character: 'x',
-        word: ['X-ray', 'Xray']
+        word: 'X-ray',
+        override: [
+          {
+            word: 'Xaintrie',
+            variant: 'icao1920'
+          },
+          {
+            word: 'Xantippe',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Xanthippe',
+            variant: [
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Xray',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Equis',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'Extra',
+            variant: [
+              'icao1951',
+              'ia1951'
+            ]
+          }
+        ]
       },
       {
         character: 'y',
-        word: 'Yankee'
+        word: 'Yankee',
+        override: [
+          {
+            word: 'Yokohama',
+            variant: [
+              'icao1920',
+              'icao1927',
+              'icao1932',
+              'icao1938',
+              'icao1947ac',
+              'ia1932',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Yoke',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'ia1946',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Young',
+            variant: [
+              'icao1947arrl',
+              'ia1947arrl'
+            ]
+          },
+          {
+            word: 'Yolanda',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          },
+          {
+            word: 'York',
+            variant: [
+              'icao1947',
+              'ia1947'
+            ]
+          },
+          {
+            word: 'Yankey',
+            variant: [
+              'icao1949',
+              'ia1949'
+            ]
+          }
+        ]
       },
       {
         character: 'z',
-        word: 'Zulu'
+        word: 'Zulu',
+        override: [
+          {
+            word: 'Zanzibar',
+            variant: 'icao1920'
+          },
+          {
+            word: 'Zululand',
+            variant: 'icao1927'
+          },
+          {
+            word: 'Zürich',
+            variant: [
+              'icao1932',
+              'ia1932'
+            ]
+          },
+          {
+            word: 'Zurich',
+            variant: [
+              'icao1938',
+              'icao1947ac',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Zebra',
+            variant: [
+              'icao1946',
+              'icao1947usuk1943',
+              'icao1947arrl',
+              'icao1949',
+              'ia1946',
+              'ia1947usuk1943',
+              'ia1947arrl',
+              'ia1949'
+            ]
+          },
+          {
+            word: 'Zeta',
+            variant: [
+              'icao1947lac',
+              'ia1947lac'
+            ]
+          }
+        ]
       },
       {
         character: '0',
-        word: 'Zero'
+        word: 'Zero',
+        override: [
+          {
+            word: 'Zeero',
+            variant: [
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Nadazero',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '1',
-        word: 'One'
+        word: 'One',
+        override: [
+          {
+            word: 'Wun',
+            variant: [
+              'icao1947usuk1943',
+              'icao2008',
+              'ia1947usuk1943',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Unaone',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '2',
-        word: 'Two'
+        word: 'Two',
+        override: [
+          {
+            word: 'Too',
+            variant: [
+              'icao1947usuk1943',
+              'icao2008',
+              'ia1947usuk1943',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Bissotwo',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '3',
-        word: 'Three'
+        word: 'Three',
+        override: [
+          {
+            word: 'Thuh-ree',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Tree',
+            variant: [
+              'icao2008',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Terrathree',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '4',
-        word: 'Four'
+        word: 'Four',
+        override: [
+          {
+            word: 'Fo-wer',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Fower',
+            variant: [
+              'icao2008',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Kartefour',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '5',
-        word: 'Five'
+        word: 'Five',
+        override: [
+          {
+            word: 'Fi-yiv',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Fife',
+            variant: [
+              'icao2008',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Pantafive',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '6',
-        word: 'Six'
+        word: 'Six',
+        override: {
+          word: 'Soxisix',
+          variant: 'imms1967'
+        }
       },
       {
         character: '7',
-        word: 'Seven'
+        word: 'Seven',
+        override: {
+          word: 'Setteseven',
+          variant: 'imms1967'
+        }
       },
       {
         character: '8',
-        word: 'Eight'
+        word: 'Eight',
+        override: [
+          {
+            word: 'Ate',
+            variant: [
+              'icao1947usuk1943',
+              'ia1947usuk1943'
+            ]
+          },
+          {
+            word: 'Ait',
+            variant: [
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Oktoeight',
+            variant: 'imms1967'
+          }
+        ]
       },
       {
         character: '9',
-        word: 'Nine'
+        word: 'Nine',
+        override: [
+          {
+            word: 'Niner',
+            variant: [
+              'icao1947usuk1943',
+              'icao2008',
+              'ia1947usuk1943',
+              'ia1956',
+              'imms1965',
+              'imms2000'
+            ]
+          },
+          {
+            word: 'Novenine',
+            variant: 'imms1967'
+          }
+        ]
+      },
+      {
+        character: '-',
+        word: [
+          'Dash',
+          'Hyphen'
+        ]
       },
       {
         character: '.',
-        word: ['Period', 'Stop']
+        word: [
+          'Period',
+          'Decimal point',
+          'Point'
+        ],
+        override: [
+          {
+            word: 'Full stop',
+            variant: [
+              'icao1938',
+              'icao1947ac',
+              'icao1959',
+              'imms1932'
+            ]
+          },
+          {
+            word: 'Stop',
+            variant: 'imms1967'
+          }
+        ]
+      },
+      {
+        character: ',',
+        word: 'Comma'
+      },
+      {
+        character: '/',
+        word: 'Fraction bar'
       }
     ]
   },
   {
     name: 'dutch',
-    label: 'Dutch spelling alphabet',
+    label: 'Dutch',
     mappings: [
       {
         character: ' ',
@@ -329,7 +1797,7 @@ const defaultAlphabetSpecs = [
   },
   {
     name: 'german',
-    label: 'German spelling alphabet',
+    label: 'German',
     mappings: [
       {
         character: ' ',
@@ -499,7 +1967,7 @@ const defaultAlphabetSpecs = [
   },
   {
     name: 'swedish',
-    label: 'Swedish Armed Forces\' radio alphabet',
+    label: 'Swedish',
     mappings: [
       {
         character: ' ',
@@ -665,7 +2133,7 @@ const defaultAlphabetSpecs = [
   },
   {
     name: 'russian',
-    label: 'Russian spelling alphabet',
+    label: 'Russian',
     mappings: [
       {
         character: ' ',
@@ -854,6 +2322,9 @@ const defaultAlphabetSpecs = [
 
 const defaultSpaceWord = '(space)'
 
+const wrapInArray = obj => obj === undefined || obj === null ? [] :
+  Array.isArray(obj) ? [...obj] : [obj]
+
 /**
  * Encoder brick translating characters into words of given spelling alphabet.
  */
@@ -882,6 +2353,14 @@ export default class SpellingAlphabetEncoder extends Encoder {
       labels: alphabetSpecs.map(alphabet => alphabet.label),
       randomizable: false,
       style: 'radio'
+    })
+
+    this.addSetting({
+      name: 'variant',
+      type: 'enum',
+      elements: [ '' ],
+      labels: [ '' ],
+      randomizable: false
     })
 
     this.buildTranslationMap()
@@ -940,6 +2419,9 @@ export default class SpellingAlphabetEncoder extends Encoder {
       case 'alphabet':
         this.buildTranslationMap()
         break
+      case 'variant':
+        this._applyVariantOverrides()
+        break;
     }
   }
 
@@ -955,28 +2437,68 @@ export default class SpellingAlphabetEncoder extends Encoder {
       throw new Error(`Alphabet with name '${name}' is not defined`)
     }
 
+    const variantSetting = this.getSetting('variant')
+    const variants = spec.variants || [{
+      name: '',
+      value: ''
+    }]
+
+    variantSetting.setElements(variants.map(v => v.name), variants.map(v => v.label), variants.map(v => v.description), false)
+
     // Build encode/decode maps
     const characterMap = {};
     const wordMap = {}
 
-    spec.mappings.forEach((mapping) => {
-      const characters = Array.isArray(mapping.character) ? mapping.character : [mapping.character]
-      const words = Array.isArray(mapping.word) ? mapping.word : [mapping.word]
+    this._variantOverridesMap = {}
 
-      characters.forEach((character) => {
+    for (let mapping of spec.mappings) {
+      const characters = wrapInArray(mapping.character)
+      const words = wrapInArray(mapping.word)
+      const overrides = wrapInArray(mapping.override)
+
+      for (let override of overrides) {
+        const overrideWords = wrapInArray(override.word)
+        const variants = wrapInArray(override.variant)
+        const overrideWord = overrideWords[0]
+        words.push(...overrideWords)
+
+        for (let variant of variants) {
+          if (this._variantOverridesMap[variant] === undefined) {
+            this._variantOverridesMap[variant] = []
+          }
+
+          for (let variantOverride of this._variantOverridesMap[variant]) {
+            const duplicatedCharacter = variantOverride.characters.find(character => characters.includes(character))
+            if (duplicatedCharacter) {
+              throw new Error(`Alphabet with name '${name}' has conflicting mappings for variant '${variant}' with duplicated character '${duplicatedCharacter}'`)
+            }
+
+            if (variantOverride.word === overrideWord) {
+              throw new Error(`Alphabet with name '${name}' has conflicting mappings for variant '${variant}' with duplicated word '${duplicatedCharacter}'`)
+            }
+          }
+          
+          this._variantOverridesMap[variant].push({
+            characters: characters,
+            word: overrideWord
+          })
+        }
+      }
+
+      for (let character of characters) {
         if (characterMap[character] !== undefined) {
           throw new Error(`Alphabet with name '${name}' has multiple mappings with character '${character}'`)
         }
         characterMap[character] = words[0]
-      })
+      }
 
-      words.forEach((word) => {
+      for (let word of words) {
         if (wordMap[word] !== undefined) {
           throw new Error(`Alphabet with name '${name}' has multiple mappings with word '${word}'`)
         }
         wordMap[word] = characters[0]
-      })
-    })
+      }
+    }
 
     if (characterMap[' '] === undefined) {
       characterMap[' '] = defaultSpaceWord
@@ -985,6 +2507,29 @@ export default class SpellingAlphabetEncoder extends Encoder {
 
     this._characterMap = characterMap
     this._wordMap = wordMap
+
+    this._characterMapNoOverrides = {}
+    this._wordMapNoOverrides = {}
+    Object.assign(this._characterMapNoOverrides, this._characterMap)
+    Object.assign(this._wordMapNoOverrides, this._wordMap)
+
+    variantSetting.setValue(variants[0].name)
+
     return this
+  }
+
+  _applyVariantOverrides () {
+    Object.assign(this._characterMap, this._characterMapNoOverrides)
+    Object.assign(this._wordMap, this._wordMapNoOverrides)
+    const variant = this.getSettingValue('variant')
+    let variantOverrides = this._variantOverridesMap[variant]
+    if (variantOverrides) {
+      for (let variantOverride of variantOverrides) {
+        for (let character of variantOverride.characters) {
+          this._characterMap[character] = variantOverride.word
+        }
+        this._wordMap[variantOverride.word] = variantOverride.characters[0]
+      }
+    }
   }
 }
